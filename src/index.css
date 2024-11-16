@@ -8,20 +8,230 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --primary: #4cb5ae;
+  --secondary: #fffff;
+  --border-color: #d4d7eb;
+}
 
 body {
-  font-family: 'Nazanin', sans-serif;
-}
-body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Nazanin',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ h1{
+  font-size: 26px;
+  font-weight: 700;
+ }
+
+ h2{
+  font-size: 24px;
+  font-weight: 600;
+ }
+
+ p{
+  font-size: 20px;
+  font-weight: 300;
+ }
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display : flex;
+  padding :10px;
+  gap :0.5rem;
+  align-items : center
+}
+
+
+.rmdp-input {
+padding: 15px!important;
+text-align: center;
+font-size: 18px;
+}
+.container {
+  width :25px;
+  aspect-ratio : 1;
+  overflow : hidden;
+  border-radius : 50%;
+  box-shadow : 2px 5px 5px rgba(0,0,0,0.2);
+}
+
+.cRadioBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  border: solid 5px var(--border-color);
+  box-sizing: border-box;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  
+}
+
+.cRadioBtn:hover {
+  border: solid 8px var(--primary);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--secondary);
+}
+
+.check:checked + label > .container > .cRadioBtn > .overlay {
+  background: #fff;
+  animation: shrink 0.3s ease-in-out forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.drops {
+  position: absolute;
+  background: #fff;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.lgDrop {
+  width: 50%;
+}
+
+.xsDrop {
+  width: 20%;
+}
+
+.mdDrop {
+  width: 30%;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .lgDrop {
+  animation: drop 0.5s ease-in-out forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .mdDrop {
+  animation: drop 0.8s ease-in forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .xsDrop {
+  animation: drop 0.9s linear forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: -100%;
+  }
+  75% {
+    top: 10%;
+  }
+  100% {
+    top: 25%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.elementContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
