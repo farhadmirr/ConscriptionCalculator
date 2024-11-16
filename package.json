@@ -14,8 +14,10 @@
     "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-multi-date-picker": "^4.5.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zaman": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
