@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainPage from './Pages/MainPage';
+import Modal from './Components/Modal';
 import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
