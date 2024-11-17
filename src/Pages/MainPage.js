@@ -183,7 +183,7 @@ const MainPage = () => {
         console.log('initialDate', initialDate)
     }, [initialDate])
     return (
-        <div className='w-full h-screen  pr-10 pl-10 relative'>
+        <div className='w-full h-screen py-10 md:py-0 pr-10 pl-10 relative'>
             <div className='h-full w-full flex flex-col justify-around items-center gap-2 md:gap-0'>
                 <Modal
                     isOpen={modal}
