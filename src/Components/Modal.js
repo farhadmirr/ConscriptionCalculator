@@ -50,8 +50,8 @@ const Modal = ({ isOpen, onClose, title, children, isError, subText }) => {
                 )}
                 <hr className='mt-2 mb-2' />
                 {/* Content */}
-                <div className="text-gray-700 flex flex-col">
-                    <p className='text-justify' style={{ direction: 'rtl' }}>{children}</p>
+                <div className="text-gray-700 flex flex-col gap-3">
+                    <p className='text-center' style={{ direction: 'rtl' }}>{children}</p>
                     <p className='text-justify' style={{ direction: 'rtl' }}>{subText}</p>
                 </div>
             </div>
@@ -59,28 +59,5 @@ const Modal = ({ isOpen, onClose, title, children, isError, subText }) => {
     );
 };
 
-// Example usage of Modal component
-// const App = () => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-
-//   return (
-//     <div className="flex items-center justify-center h-screen bg-gray-100">
-//       <button
-//         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-//         onClick={() => setIsModalOpen(true)}
-//       >
-//         Open Modal
-//       </button>
-
-//       <Modal
-//         isOpen={isModalOpen}
-//         onClose={() => setIsModalOpen(false)}
-//         title="Example Modal"
-//       >
-//         <p>This is a sample modal content. You can add any content here.</p>
-//       </Modal>
-//     </div>
-//   );
-// };
 
 export default Modal;
